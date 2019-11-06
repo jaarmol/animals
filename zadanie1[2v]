@@ -1,0 +1,20 @@
+class Animal {
+    constructor(name) 
+    { this.name = name; }
+    speak() { return `${this.name} says ${this.sound()}`;}
+    getName() { return `It's ${this.name}`; }
+  }
+  
+  class Dog extends Animal {
+    sound() { return 'How how'; }
+  }
+  
+  class Cow extends Animal {
+    sound() { return 'Muuu'; }
+  }
+
+  const animals = [new Dog('Max'), new Cow('Marie')];
+  
+  animals.forEach(a => console.log(a.getName()));
+  // animals.forEach(a => console.log(a.speak()));
+  // animals.forEach(a => console.log(a.sound()));
